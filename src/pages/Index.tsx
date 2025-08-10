@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, ExternalLink, Download } from "lucide-react";
+import SkillsShowcase from "@/components/SkillsShowcase";
 
 const Index = () => {
   const experiences = [
@@ -186,20 +187,10 @@ const Index = () => {
         </section>
 
         {/* Skills */}
-        <section id="skills" className="py-12">
-          <h2 className="font-display text-3xl md:text-4xl mb-6 tracking-wider">Skills</h2>
-          <div className="space-y-8">
-            {Object.entries(skills).map(([category, list]) => (
-              <div key={category}>
-                <h3 className="font-display text-xl mb-3">{category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {list.map((item) => (
-                    <Badge key={item} className="bg-accent text-accent-foreground border border-foreground/20">{item}</Badge>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+        <section id="skills" className="py-20 md:py-28 relative bg-card/40">
+          <h2 className="font-display text-3xl md:text-4xl mb-3 tracking-wider text-center">Skills</h2>
+          <p className="text-center text-foreground/80 mb-8 max-w-2xl mx-auto">From raw data to deployable systems — a cinematic blend of tools that ship.</p>
+          <SkillsShowcase skills={skills} />
         </section>
 
         {/* Education */}
