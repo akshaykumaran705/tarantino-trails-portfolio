@@ -89,7 +89,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border/60 bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-card/60 sticky top-0 z-40">
         <div className="container py-4 flex items-center justify-between">
-          <a href="#home" className="font-display text-2xl tracking-wider story-link">AKSHAY VENKATESAN</a>
+          <a href="#home" className="font-display text-2xl tracking-wider story-link">Akshay Kumaran Venkatesan</a>
           <nav className="hidden md:flex gap-6 text-sm font-medium">
             {[
               ["Experience", "#experience"],
@@ -240,7 +240,7 @@ const Index = () => {
 
       <footer className="border-t border-border/60">
         <div className="container py-6 text-sm flex flex-col md:flex-row items-center justify-between">
-          <p>© {new Date().getFullYear()} Akshay Venkatesan</p>
+          <p>© {new Date().getFullYear()} Akshay Kumaran Venkatesan</p>
           <a href="#home" className="story-link">Back to top</a>
         </div>
       </footer>
