@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Phone, MapPin, ExternalLink, Download } from "lucide-react";
 import SkillsShowcase from "@/components/SkillsShowcase";
+import ProjectFlipCard from "@/components/ProjectFlipCard";
 
 const Index = () => {
   const experiences = [
@@ -168,20 +168,8 @@ const Index = () => {
         <section id="projects" className="py-12">
           <h2 className="font-display text-3xl md:text-4xl mb-6 tracking-wider">Projects</h2>
           <div className="grid gap-6 md:grid-cols-3">
-            {projects.map((p) => (
-              <Card key={p.title} className="transition-transform hover:-translate-y-1 hover:shadow-lg border-2 border-foreground">
-                <CardHeader>
-                  <CardTitle className="tracking-wide">{p.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-sm text-foreground/85">{p.summary}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {p.tools.map((t) => (
-                      <Badge key={t} variant="secondary">{t}</Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            {projects.map((project) => (
+              <ProjectFlipCard key={project.title} project={project} />
             ))}
           </div>
         </section>

@@ -17,7 +17,19 @@ export default {
 				'2xl': '1400px'
 			}
 		},
-		extend: {
+    extend: {
+      perspective: {
+        '1000': '1000px',
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      backfaceVisibility: {
+        'hidden': 'hidden',
+      },
+      rotate: {
+        'x-180': 'rotateX(180deg)',
+      },
 			fontFamily: {
 				display: ['"Alfa Slab One"', 'serif'],
 				sans: ['Oswald', 'ui-sans-serif', 'system-ui', 'sans-serif'],

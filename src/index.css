@@ -130,4 +130,21 @@ All colors MUST be HSL.
   .pulse {
     animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
   }
+
+  /* 3D flip card utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-x-180 {
+    transform: rotateX(180deg);
+  }
 }
