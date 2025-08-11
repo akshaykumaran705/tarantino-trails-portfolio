@@ -98,7 +98,22 @@ const Index = () => {
               ["Education", "#education"],
               ["Contact", "#contact"],
             ].map(([label, href]) => (
-              <a key={href} href={href as string} className="story-link">
+              <a 
+                key={href} 
+                href={href as string} 
+                className="story-link transition-colors duration-200 hover:text-primary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetId = (href as string).substring(1);
+                  const targetElement = document.getElementById(targetId);
+                  if (targetElement) {
+                    targetElement.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }
+                }}
+              >
                 {label as string}
               </a>
             ))}
