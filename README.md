@@ -1,22 +1,20 @@
-# Welcome to your Lovable project
+# Akshay Kumaran Venkatesan - Portfolio
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/e2a30b15-d157-4aab-8cd6-4517f8cee8b9
+**Portfolio**: Personal portfolio showcasing data analysis, software engineering projects, and professional experience.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**Use your preferred IDE**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e2a30b15-d157-4aab-8cd6-4517f8cee8b9) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+Clone this repository and start developing with your favorite code editor.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Clone this repo and work locally with your own IDE. Push changes to keep your portfolio updated.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +60,55 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/e2a30b15-d157-4aab-8cd6-4517f8cee8b9) and click on Share -> Publish.
+### Option 1: Deploy to Render (Recommended for portfolios)
 
-## Can I connect a custom domain to my Lovable project?
+1. **Push your code to GitHub**
+   ```bash
+   git add .
+   git commit -m "Prepare for deployment"
+   git push origin main
+   ```
+
+2. **Deploy on Render**
+   - Go to [render.com](https://render.com) and sign up/login
+   - Click "New +" → "Static Site"
+   - Connect your GitHub repository
+   - Configure:
+     - **Name**: `akshay-portfolio`
+     - **Build Command**: `npm install && npm run build`
+     - **Publish Directory**: `dist`
+   - Click "Create Static Site"
+
+3. **Your site will be available at**: `https://your-site-name.onrender.com`
+
+### Option 2: Deploy to AWS S3 + CloudFront
+
+1. **Build your project**: `npm run build`
+2. **Upload to S3 bucket** (with static website hosting enabled)
+3. **Set up CloudFront distribution** for CDN and HTTPS
+4. **Configure custom domain** (optional)
+
+### Option 3: Deploy to Vercel
+
+1. **Connect your GitHub repo** to [vercel.com](https://vercel.com)
+2. **Automatic deployment** on every push
+3. **Custom domain support** included
+
+## Can I connect a custom domain to my portfolio?
 
 Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Render
+- Go to your site settings in Render
+- Click on "Custom Domains"
+- Add your domain and follow the DNS configuration
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Vercel
+- Automatic custom domain support
+- SSL certificates included
+- Easy DNS management
+
+### AWS
+- Configure in Route 53
+- Set up SSL certificates in ACM
+- Point your domain to CloudFront distribution

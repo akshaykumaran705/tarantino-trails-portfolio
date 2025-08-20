@@ -27,10 +27,15 @@ const SkillsShowcase: React.FC<SkillsShowcaseProps> = ({ skills }) => {
     <div className="space-y-8">
       {/* Tabbed categories */}
       <Tabs defaultValue={defaultTab} className="w-full">
-        <TabsList className="w-full grid grid-cols-2 md:grid-cols-4 gap-2 bg-card border border-foreground/20">
+        <TabsList className="w-full grid grid-cols-5 gap-1 bg-card border border-foreground/20 p-1">
           {entries.map(([category, list]) => (
-            <TabsTrigger key={category} value={category} className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
-              <span className="flex items-center">{iconFor(category)}{category} <span className="ml-2 text-foreground/60">({list.length})</span></span>
+            <TabsTrigger key={category} value={category} className="data-[state=active]:bg-accent data-[state=active]:text-accent-foreground text-xs px-2 py-2">
+              <span className="flex items-center justify-center text-center">
+                {iconFor(category)}
+                <span className="hidden sm:inline">{category}</span>
+                <span className="sm:hidden">{category.split(' ')[0]}</span>
+                <span className="ml-1 text-foreground/60">({list.length})</span>
+              </span>
             </TabsTrigger>
           ))}
         </TabsList>
